@@ -4,7 +4,7 @@ import {Readable} from 'stream';
 /**
  * Attempts to download a video from the given url.
  */  
-export function ytdl(link: string, options?: DownloadOptions): Readable;
+export default function ytdl(link: string, options?: DownloadOptions): Readable;
 export namespace ytdl
 {
   /**
@@ -109,5 +109,3 @@ export interface DownloadOptions {
    */
   request?: (url: string, options: {}, callback?: (err: {}, body: any) => void) => ClientRequest
 }
-
-export default ytdl;
